@@ -3,6 +3,7 @@
 ##################
 # FOR PRODUCTION
 ####################
+import os
 from src.app import app
 
 if __name__ == "__main__":
@@ -10,4 +11,4 @@ if __name__ == "__main__":
     # FOR DEVELOPMENT
     ####################
     #app.run(host='0.0.0.0', debug=True)
-    app.run(host='127.0.0.1', port=5000, debug=True, threaded=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)), debug=True, threaded=True)
