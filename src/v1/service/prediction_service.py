@@ -53,6 +53,28 @@ class PredictService:
      # End
     
 
+    @property
+    def class_mapping(self) -> Dict[int, str]:
+        """
+        return label encoding to class name
+
+        parameter
+        ---------
+
+         None
+
+        return
+        ----------
+
+        Dict[int, str]
+
+        mapping label encoding to class name
+
+        """
+        return self.classname
+    # End
+
+
     def _get_model_output(self, data: np.array)-> np.array:        
         """
         return the model output numpy array
