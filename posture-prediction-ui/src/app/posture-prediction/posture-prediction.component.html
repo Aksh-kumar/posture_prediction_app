@@ -1,0 +1,74 @@
+<div>
+    <table class="table table-striped table-bordered fit-screen">
+        <thead>
+            <tr>
+                    <td>counter</td>
+                <ng-container *ngFor="let column of axis;let i = index">
+                    <td>{{column}}</td>
+                </ng-container>
+                   <!-- <td><button class='btn-primary' (click)='getAllPrediction($event)'>GetAll  Prediction</button></td> -->
+                   <td>get prediction</td>
+                   <td>Get probability value</td>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let data of testData;let i = index">
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{data.data.X0}}</td>
+                    <td>{{data.data.Y0}}</td>
+                    <td>{{data.data.Z0}}</td>
+
+                    <td>{{data.data.X1}}</td>
+                    <td>{{data.data.Y1}}</td>
+                    <td>{{data.data.Z1}}</td>
+
+                    <td>{{data.data.X2}}</td>
+                    <td>{{data.data.Y2}}</td>
+                    <td>{{data.data.Z2}}</td>
+
+                    <td>{{data.data.X3}}</td>
+                    <td>{{data.data.Y3}}</td>
+                    <td>{{data.data.Z3}}</td>
+
+                    <td>{{data.data.X4}}</td>
+                    <td>{{data.data.Y4}}</td>
+                    <td>{{data.data.Z4}}</td>
+
+                    <td>{{data.data.X5}}</td>
+                    <td>{{data.data.Y5}}</td>
+                    <td>{{data.data.Z5}}</td>
+
+                    <td>{{data.data.X6}}</td>
+                    <td>{{data.data.Y6}}</td>
+                    <td>{{data.data.Z6}}</td>
+
+                    <td>{{data.data.X7}}</td>
+                    <td>{{data.data.Y7}}</td>
+                    <td>{{data.data.Z7}}</td>
+
+                    <td>{{data.data.X8}}</td>
+                    <td>{{data.data.Y8}}</td>
+                    <td>{{data.data.Z8}}</td>
+
+                    <td>{{data.data.X9}}</td>
+                    <td>{{data.data.Y9}}</td>
+                    <td>{{data.data.Z9}}</td>
+
+                    <td>{{data.data.X10}}</td>
+                    <td>{{data.data.Y10}}</td>
+                    <td>{{data.data.Z10}}</td>
+
+                    <td>{{data.data.X11}}</td>
+                    <td>{{data.data.Y11}}</td>
+                    <td>{{data.data.Z11}}</td>
+
+                    <td>{{data.label}}</td>
+                    <td>{{data.prediction}}</td>
+                    <td><button class='btn-primary' (click)='getPrediction(i)'>predict</button></td>
+                    <td><button class='btn-primary' (click)='getProbabilityValue(i)'>predict probability</button></td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
